@@ -2,20 +2,20 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './test.css'
+import '../Stylesheets/test.css';
 
-function BasicExample() {
+function ProductCard() {
   return (
     <div className="d-flex justify-content-center">
-      <Card style={{ width: '25rem' }}>
+      <Card style={{ width: '22rem'}} className='card'>
         <Card.Img variant="top" src="/images/hoodie.jpg" />
         <Card.Body className="text-center">
-        <Card.Title className="my-font">Man Hoodie</Card.Title>
+        <Card.Title className="my-font"  style={{fontWeight: 'bold', fontSize: '120%'}}>Man Hoodie</Card.Title>
         <Card.Text className="my-font">
         Some quick example text to build on the card title and make up the
         bulk of the card's content.
         </Card.Text>
-        <Card.Text className="my-font">
+        <Card.Text className="my-font"  style={{fontSize: '102%'}}>
         Price: $99.99
         </Card.Text>
           <div className="my-font">
@@ -32,4 +32,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default ProductCard;

@@ -1,12 +1,22 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Component from './test';
+import ProductCard from './Components/test';
 
 function App() {
   return (
-    
-    <div className="App">
-      <Component />
+    <div className="App d-flex flex-wrap justify-content-center">
+      <div className="m-2">
+        <ProductCard />
+      </div>
+      <div className="m-2">
+        <ProductCard />
+      </div>
+      <div className="m-2">
+        <ProductCard />
+      </div>
+      <div className="m-2">
+        <ProductCard />
+      </div>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Welcome to React</h1>

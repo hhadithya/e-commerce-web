@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300');
 
+
 #add-to-cart-button{
     border-radius: 0%;
     background-color: black;
@@ -8,10 +9,12 @@
   }
   
 #button-line{
-border-radius: 0%;
-margin-right: 5px;
+  border-radius: 0%;
+  margin-right: 5px;
+  font-size: 80%;
 }
 
 .my-font {
 font-family: Prompt;
+font-size: 80%;
 }
