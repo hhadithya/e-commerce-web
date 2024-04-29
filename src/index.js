@@ -11,9 +11,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <SignIn />
-    {/* <ColorSchemesExample />
+    <ColorSchemesExample />
     <DarkVariantExample />
-    <Home /> */}
+    <Home />
   </React.StrictMode>
 );
 
