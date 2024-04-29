@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../Stylesheets/test.css';
+import '../Stylesheets/productCard.css';
 
 function ProductCard({title, price, image, text}) {
   return (

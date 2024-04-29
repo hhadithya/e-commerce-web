@@ -1,8 +1,12 @@
+import React, { useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProductCard from '../Components/ProductCard';
 import products from '../data/products.json';
 
 function Home(){
+    useEffect(() => {
+        document.title = "Home";
+    }, []);
     return(
         <div className="App d-flex flex-wrap justify-content-center">
             {products.map(product => (

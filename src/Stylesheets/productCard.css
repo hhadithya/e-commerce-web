@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300');
-
 
 #add-to-cart-button{
     border-radius: 0%;
@@ -15,6 +13,5 @@
 }
 
 .my-font {
-font-family: Prompt;
 font-size: 80%;
 }
