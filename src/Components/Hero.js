@@ -1,46 +1,39 @@
+import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
-function DarkVariantExample() {
+
+function Hero() {
   return (
-    <Carousel data-bs-theme="dark">
+    <Carousel>
       <Carousel.Item>
-        <Row>
-          <Col md={6}>
-            <Carousel.Caption>
-              <h5>First slide label</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Col>
-          <Col md={6}>
-            <img
-              className="d-block w-100"
-              src="/images/img3.jpg"
-              alt="First slide"
-            />
-          </Col>
-        </Row>
+        <img
+          className="d-block w-100"
+          src="/images/banner.webp"
+          alt="First slide"
+          style={{ objectFit: 'cover' , height: 'auto'}}
+        />
+        <Carousel.Caption>
+          <h3>Slide 1</h3>
+          <p>Some description for slide 1</p>
+          <button className="btn btn-primary">Shop Now</button>
+        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <Row>
-          <Col md={6}>
-            <Carousel.Caption>
-              <h5>Second slide label</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Col>
-          <Col md={6}>
-            <img
-              className="d-block w-100"
-              src="/images/img3.jpg"
-              alt="Second slide"
-            />
-          </Col>
-        </Row>
+        <img
+          className="d-block w-100"
+          src="/images/banner.jpg"
+          alt="Second slide"
+          style={{ objectFit: 'cover' , height: 'auto'}}
+        />
+        <Carousel.Caption>
+          <h3>Slide 2</h3>
+          <p>Some description for slide 2</p>
+          <button className="btn btn-primary">Shop Now</button>
+        </Carousel.Caption>
       </Carousel.Item>
+      {/* Add more Carousel.Items for additional slides */}
     </Carousel>
   );
 }
 
-export default DarkVariantExample;
+export default Hero;

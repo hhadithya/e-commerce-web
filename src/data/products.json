@@ -40,5 +40,87 @@
     "price": "$89.99",
     "image": "/images/img2.jpg",
     "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
+  },  {
+    "id": 1,
+    "title": "Product 1",
+    "price": "$99.99",
+    "image": "/images/img1.jpg",
+    "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
+  },
+  {
+    "id": 2,
+    "title": "Product 2",
+    "price": "$89.99",
+    "image": "/images/img2.jpg",
+    "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
+  },
+  {
+    "id": 3,
+    "title": "Product 3",
+    "price": "$79.99",
+    "image": "/images/img3.jpg",
+    "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
+  },
+  {
+    "id": 4,
+    "title": "Product 4",
+    "price": "$69.99",
+    "image": "/images/img4.webp",
+    "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
+  },
+  {
+    "id": 1,
+    "title": "Product 1",
+    "price": "$99.99",
+    "image": "/images/img1.jpg",
+    "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
+  },
+  {
+    "id": 2,
+    "title": "Product 2",
+    "price": "$89.99",
+    "image": "/images/img2.jpg",
+    "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
+  },  {
+    "id": 1,
+    "title": "Product 1",
+    "price": "$99.99",
+    "image": "/images/img1.jpg",
+    "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
+  },
+  {
+    "id": 2,
+    "title": "Product 2",
+    "price": "$89.99",
+    "image": "/images/img2.jpg",
+    "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
+  },
+  {
+    "id": 3,
+    "title": "Product 3",
+    "price": "$79.99",
+    "image": "/images/img3.jpg",
+    "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
+  },
+  {
+    "id": 4,
+    "title": "Product 4",
+    "price": "$69.99",
+    "image": "/images/img4.webp",
+    "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
+  },
+  {
+    "id": 1,
+    "title": "Product 1",
+    "price": "$99.99",
+    "image": "/images/img1.jpg",
+    "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
+  },
+  {
+    "id": 2,
+    "title": "Product 2",
+    "price": "$89.99",
+    "image": "/images/img2.jpg",
+    "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
   }
 ]

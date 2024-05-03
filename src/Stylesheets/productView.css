@@ -1,0 +1,17 @@
+.card-body {
+    padding: 1rem;
+    font-family: Prompt, sans-serif;
+  }
+  .card-text {
+    line-height: 1.5;
+  }
+  select.form-select {
+    margin-bottom: 1rem;
+  }
+  #vertical-align {
+    margin-top: 10rem;
+  }
+  .star-style {
+    color: #ffea00;
+  }
+  

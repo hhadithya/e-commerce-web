@@ -1,0 +1,18 @@
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    flex-shrink: 0;
+    font-family: Prompt, sans-serif;
+}
+img {
+    width: 200px;
+    height: 180px;
+}
+.social-icons i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+.text1{
+    color: #b8b8c0;
+}
