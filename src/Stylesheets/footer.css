@@ -29,3 +29,9 @@ img {
 #emailInput::placeholder{
     color: rgb(185, 185, 185);
 }
+
+@media (max-width: 600px) {
+    #emailInput {
+        width: 175%;
+    }
+}
