@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <img src="/Images/logo-white.png" alt="Company Logo" />
+                        <img src="/Images/logo-white.png" alt="Company Logo" className="img-fluid" />
                         <div className="d-flex flex-column gap-1">
                             <p style={{ marginBottom: '1%' }} className='heading'>FOLLOW US</p>
                             <div className="d-flex gap-4">
