@@ -45,7 +45,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <p style={{color: 'rgb(175,175,175)', fontWeight: 'lighter', paddingTop:'2%'}}>&copy; 2024 KONIK Clothing. All rights reserved. Powered by FIT</p>
+                    <p id='copyRights'>&copy; 2024 KONIK Clothing. All rights reserved. Powered by FIT</p>
                 </div>
             </div>
         </footer>
