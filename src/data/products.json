@@ -10,28 +10,28 @@
     "id": 2,
     "title": "Shinu Sleeve Shirt - Black",
     "price": "$89.99",
-    "image": "/Images/top.webp",
+    "image": "/Images/top2.webp",
     "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
   },
   {
     "id": 3,
     "title": "Shinu Sleeve Shirt - White",
     "price": "$79.99",
-    "image": "/Images/top.webp",
+    "image": "/Images/top1.webp",
     "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
   },
   {
     "id": 4,
     "title": "Shinu Sleeve Shirt - Blue",
     "price": "$69.99",
-    "image": "/Images/top.webp",
+    "image": "/Images/top1.webp",
     "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
   },
   {
     "id": 1,
     "title": "Sakura Embroidered Sweatshirt - Black",
     "price": "$99.99",
-    "image": "/Images/top.webp",
+    "image": "/Images/top2.webp",
     "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
   },
   {
@@ -45,7 +45,7 @@
     "id": 1,
     "title": "Uysa Shirt Jacket - Green",
     "price": "$99.99",
-    "image": "/Images/top.webp",
+    "image": "/Images/top2.webp",
     "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
   }
 ]

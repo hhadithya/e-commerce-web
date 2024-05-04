@@ -7,12 +7,12 @@ function ProductRows(){
         document.title = "Home";
     }, []);
     return(
-        <div className="App d-flex flex-wrap justify-content-center">
-            {products.map(product => (
-                <div className="m-2" key={product.id}>
-                    <ProductCard title={product.title} price={product.price} image={product.image} text={product.text}/>
-                </div>
-            ))}
+        <div className="row justify-content-center" style={{paddingLeft: '3%'}}>
+        {products.map(product => (
+            <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={product.id}>
+                <ProductCard title={product.title} price={product.price} image={product.image} text={product.text}/>
+            </div>
+        ))}
         </div>
     );
 }

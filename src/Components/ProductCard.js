@@ -2,6 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../Stylesheets/productCard.css';
+import { FaHeart } from "react-icons/fa";
 
 function ProductCard({title, price, image}) {
   return (
@@ -11,6 +12,7 @@ function ProductCard({title, price, image}) {
         <Card.Img className="my-card-img" variant="top" src={image}/>
         <Card.ImgOverlay className="my-card-img-overlay-text"
         >Quick View</Card.ImgOverlay>
+        <Card.ImgOverlay className=""><FaHeart className="heart-icon" /></Card.ImgOverlay>
       </div>
         <Card.Body className="text-center">
           <Card.Title className="my-font">{title}</Card.Title>
