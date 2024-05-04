@@ -6,7 +6,7 @@ import { FaHeart } from "react-icons/fa";
 
 function ProductCard({title, price, image}) {
   return (
-    <div className="d-flex">
+    <div className="d-flex" style={{color: '#151515'}}>
       <Card  style={{ width: '20rem', height: '30rem', borderRadius: '0%', border: '0'}}>  
       <div className="image-wrapper">
         <Card.Img className="my-card-img" variant="top" src={image}/>
