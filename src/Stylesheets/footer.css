@@ -30,8 +30,14 @@ img {
     color: rgb(185, 185, 185);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #emailInput {
-        width: 175%;
+        width: 180%;
+    }
+}
+
+@media (max-width: 450px) {
+    #emailInput {
+        width: 150%;
     }
 }
