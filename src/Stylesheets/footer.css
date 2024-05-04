@@ -1,18 +1,26 @@
 footer {
     background-color: black;
     color: white;
-    padding: 20px 0;
-    flex-shrink: 0;
-    font-family: Prompt, sans-serif;
+    padding: 25px 0;
+    font-family: Prompt;;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 img {
-    width: 200px;
-    height: 180px;
+    width: 120px;
+    height: auto;
 }
-.social-icons i {
-    margin-right: 10px;
-    font-size: 24px;
+.text{
+    font-size: 0.85rem;
+    font-weight: lighter;
 }
-.text1{
-    color: #b8b8c0;
+#emailInput{
+    border-radius: 0%;
+    width: 180%;
+    border: 1px solid white;
+    background-color: transparent;
+}
+.heading{
+    font-size: 1rem;
+    margin-top: 4%;
 }
