@@ -1,3 +1,4 @@
+import React from 'react';
 import '../Stylesheets/Footer.css';
 import { FaFacebook, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 
