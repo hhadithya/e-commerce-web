@@ -36,10 +36,15 @@
   height: 18rem;
   border-radius: 0%;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.my-card-img:hover {
+  transform: scale(1.1);
 }
 
 .image-wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .my-card-img-overlay-text {
