@@ -1,9 +1,16 @@
-
 #add-to-cart-button{
     border-radius: 0%;
-    background-color: black;
+    background-color: #151515;
     color: white;
     margin-top: 5%;
+    font-size: 0.8rem;
+  }
+
+#add-to-cart-button:hover{
+    border: 1px solid #151515;
+    background-color: rgb(255, 255, 255);
+    color: #151515;
+    font-weight: 600;
   }
   
 #button-line{
@@ -13,9 +20,46 @@
 }
 
 .my-font {
-font-size: 80%;
+  font-size: 0.9rem;
+  font-weight: 600;
+
 }
 
 .auth{
   font-family: 'Prompt';
+}
+
+.my-card-img {
+  margin-top: 0;
+  padding-top: 0;
+  object-fit: cover;
+  height: 18rem;
+  border-radius: 0%;
+  cursor: pointer;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.my-card-img-overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateY(475%);
+  transition: opacity 0.3s ease, transform 0.5s ease;
+  background-color: #151515;
+  height: 50px;
+  color: white;
+  font-size: 0.9rem;
+  text-align: center;
+  border-radius: 0%;
+  cursor: pointer;
+}
+
+.image-wrapper:hover .my-card-img-overlay-text {
+  opacity: 1;
+  transform: translateY(100);
 }

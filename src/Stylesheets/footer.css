@@ -7,9 +7,9 @@ footer {
     font-weight: 600;
 }
 img {
-    width: 120px;
+    width: 110px;
     height: auto;
-    margin-top: 4.5%;
+    margin-top: 5%;
 }
 .text{
     font-weight: lighter;
@@ -21,6 +21,7 @@ img {
     border: 1px solid white;
     background-color: transparent;
     margin-bottom: 5%;
+    color: rgb(185, 185, 185);
 }
 .heading{
     font-size: 1rem;
