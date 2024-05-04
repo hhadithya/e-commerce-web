@@ -24,7 +24,7 @@ const Footer = () => {
                         <form className="row g-2 align-items-center">
                             <div className="col-auto">
                                 <label htmlFor="emailInput" className="visually-hidden">Email address</label>
-                                <input type="email" className="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Email" />
+                                <input type="email" className="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Email"/>
                             </div>
                         </form>
                         <div className="row">
