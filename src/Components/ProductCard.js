@@ -10,9 +10,8 @@ function ProductCard({title, price, image}) {
       <Card  style={{ width: '20rem', height: '30rem', borderRadius: '0%', border: '0'}}>  
       <div className="image-wrapper">
         <Card.Img className="my-card-img" variant="top" src={image}/>
-        <Card.ImgOverlay className="my-card-img-overlay-text"
-        >Quick View</Card.ImgOverlay>
-        <Card.ImgOverlay className=""><FaHeart className="heart-icon" /></Card.ImgOverlay>
+        <Card.ImgOverlay className="my-card-img-overlay-text">Quick View</Card.ImgOverlay>
+        <FaHeart className="heart-icon" />
       </div>
         <Card.Body className="text-center">
           <Card.Title className="my-font">{title}</Card.Title>
