@@ -1,8 +1,8 @@
-import React from 'react';
 import { FaStar } from "react-icons/fa";
 import '../Stylesheets/productView.css';
 
 function ProductView() {
+
   return (
     <div className="container" id="vertical-align">
       <div className="row justify-content-center">
