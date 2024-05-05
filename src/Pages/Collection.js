@@ -8,7 +8,7 @@ function Home(){
             <Navbar />
             <div className='image-container'>
                 <img src="Images/tops.webp" alt="konik t shirt" className='back'/>
-                <p className='text3'>Men Casual</p>
+                <p>Men Casual</p>
             </div>
             <Footer />
         </>
