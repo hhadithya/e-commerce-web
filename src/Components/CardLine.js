@@ -9,7 +9,7 @@ const CardLine = () => {
             <Row>
                 <Col xs={6} md={3}>
                     <Card className='imgCard'>
-                        <Card.Img src="/Images/bottom.jpg" alt="Tops" />
+                        <Card.Img src="/Images/top4.webp" alt="Tops" />
                         <Card.ImgOverlay style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-end'}}>
                             <Card.Title className='title'>Tops</Card.Title>
                         </Card.ImgOverlay>
@@ -17,7 +17,7 @@ const CardLine = () => {
                 </Col>
                 <Col xs={6} md={3}>
                     <Card className='imgCard'>
-                        <Card.Img src="/Images/bottom.jpg" alt="Pants" />
+                        <Card.Img src="/Images/pant.webp" alt="Pants" />
                         <Card.ImgOverlay style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-end'}}>
                             <Card.Title className='title'>Pants</Card.Title>
                         </Card.ImgOverlay>
@@ -33,9 +33,9 @@ const CardLine = () => {
                 </Col>
                 <Col xs={6} md={3}>
                     <Card className='imgCard'>
-                        <Card.Img src="/Images/bottom.jpg" alt="Bottoms" />
+                        <Card.Img src="/Images/new.webp" alt="Bottoms" />
                         <Card.ImgOverlay style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-end'}}>
-                            <Card.Title className='title'>Bottoms</Card.Title>
+                            <Card.Title className='title'>New Fits</Card.Title>
                         </Card.ImgOverlay>
                     </Card>
                 </Col>

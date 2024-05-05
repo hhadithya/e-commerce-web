@@ -4,6 +4,7 @@ import { RiMenu2Fill } from "react-icons/ri";
 import '../Stylesheets/NavBar.css';
 
 const Navbar = () => {
+  var cartCount = 0;
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
@@ -26,7 +27,7 @@ const Navbar = () => {
           <div className="order-lg-2 nav-btns">
             <button type="button" className="btn position-relative">
               <CiShoppingCart size={25}/>
-              <span className="position-absolute top-0 start-100 translate-middle badge bg-dark rounded-circle">3</span>
+              <span className="position-absolute top-0 start-100 translate-middle badge bg-dark rounded-circle">{cartCount}</span>
             </button>
             <button type="button" className="btn position-relative">
               <CiSearch size={25}/>
@@ -39,7 +40,7 @@ const Navbar = () => {
           <div className="collapse navbar-collapse order-lg-1" id="navMenu">
             <ul className="navbar-nav mx-auto text-center">
               <li className="nav-item px-2 py-2">
-                <a className="nav-link text-uppercase text-color" href="/">home</a>
+                <a className="nav-link text-uppercase text-color" href="./">home</a>
               </li>
               <li className="nav-item px-2 py-2">
                 <a className="nav-link text-uppercase text-color" href=".com">new trends</a>
