@@ -50,7 +50,7 @@ const Navbar = () => {
                 <a className="nav-link text-uppercase text-color" href=".com">men formal</a>
               </li>
               <li className="nav-item px-2 py-2">
-                <a className="nav-link text-uppercase text-color" href="/collection">men casual</a>
+                <a className="nav-link text-uppercase text-color" href="collection">men casual</a>
               </li>
             </ul>
           </div>
