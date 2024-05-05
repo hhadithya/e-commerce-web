@@ -7,7 +7,7 @@ function Collection(){
         <>
             <Navbar />
             <div className='image-container'>
-                <img src="Images/tops.webp" alt="konik t shirt" className='back'/>
+                <img src="/Images/tops.webp" alt="konik t shirt" className='back'/>
                 <p>Men Casual</p>
             </div>
             <Footer />

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { CiShoppingCart } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 import { RiMenu2Fill } from "react-icons/ri";
@@ -33,7 +34,7 @@ const Navbar = () => {
               <CiSearch size={25}/>
             </button>
             <button type="button" className="btn position-relative">
-              LOGIN
+              <Link to='/login' style={{textDecoration: 'none', color: '#151515'}}>LOGIN</Link>
             </button>
           </div>
           

@@ -1,8 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from '../src/Pages/Home';
-import ProductView from '../src/Pages/ProductView';
+import Home from './Pages/Home';
+import ProductView from './Pages/ProductView';
 import CheckOutCard from './Components/CheckOutCard';
-import Collection from '../src/Pages/Collection';
+import Collection from './Pages/Collection';
+import LogIn from './Pages/LogIn';
+import Signup from './Pages/SignUp';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Route path="/product-view/:id" element={<ProductView />} />
         <Route path="/checkout" element={<CheckOutCard />} />
         <Route path="/collection" element={<Collection />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </>
   );
