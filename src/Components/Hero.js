@@ -21,8 +21,8 @@ function Hero() {
         />
         <Carousel.Caption>
           <div class="text-overlay">
-            <h1 className='heading'>KONIK STYLE</h1>
-            <p className='text'>The most comfortable outfits you'll ever have.</p>
+            <h1 className='heading1'>KONIK STYLE</h1>
+            <p className='text1'>The most comfortable outfits you'll ever have.</p>
             <button type="button" className="btn btn-secondary button" >Shop Now</button>
           </div>
         </Carousel.Caption>
