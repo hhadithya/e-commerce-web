@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-
+import '../Stylesheets/Hero.css';
 
 function Hero() {
   return (
@@ -11,12 +11,23 @@ function Hero() {
           alt="First slide"
           style={{ objectFit: 'cover' , height: 'auto'}}
         />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="/Images/Subtract (1).png"
+          alt="First slide"
+          style={{ objectFit: 'cover' , height: 'auto'}}
+        />
         <Carousel.Caption>
-          {/* <h3>Slide 1</h3> */}
-          {/* <p>Some description for slide 1</p> */}
-          {/* <button className="btn btn-primary">Shop Now</button> */}
+          <div class="text-overlay">
+            <h1 className='heading'>KONIK STYLE</h1>
+            <p className='text'>The most comfortable outfits you'll ever have.</p>
+            <button type="button" className="btn btn-secondary button" >Shop Now</button>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
+
     </Carousel>
   );
 }
