@@ -1,9 +1,7 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth } from "firebase/auth";
+// require ('dotenv').config();
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB8BPvqY0EdurQBfx_BySSxKIYV_Q1vebU",
   authDomain: "e-commerce-web-5fus.firebaseapp.com",
@@ -13,5 +11,6 @@ const firebaseConfig = {
   appId: "1:953680942798:web:969782825fb4cc35c4e29f"
 };
 
-// Initialize Firebase
+console.log(process.env.REACT_APP_API_KEY);
 const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);

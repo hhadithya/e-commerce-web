@@ -1,10 +1,49 @@
-import React from 'react';
+import { auth } from '../config/firebase';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+
+  const signUp = async () => {
+    if (email === '' || password === '' || firstName === '' || lastName === '') {
+      setError('All fields are required');
+      return;
+    }
+
+    if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
+      setError('Invalid email format');
+      return;
+    }
+
+    if (password.length < 6) {
+      setError('Password should be at least 6 characters long');
+      return;
+    }
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      console.log("Here");
+      const user = userCredential.user;
+      await updateProfile(user, { displayName: `${firstName} ${lastName}` });
+      setError('');
+      navigate('/');
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
   return (
     <div className="container">
       <div className="d-flex flex-column justify-content-center align-items-center" style={{height: '100vh'}}>
         <div className="col-md-6 col-lg-4">
+          {error && <p className="alert alert-danger">{error}</p>}
           <form>
             <h2 className="text-center mb-3">SIGN UP </h2>
             <p className="text-center mb-5">
@@ -18,6 +57,7 @@ const SignUp = () => {
                   className="form-control"
                   placeholder="First name"
                   aria-label="First name"
+                  onChange={(e) => setFirstName(e.target.value)}
                 />
               </div>
               <div className="col">
@@ -26,6 +66,7 @@ const SignUp = () => {
                   className="form-control"
                   placeholder="Last name"
                   aria-label="Last name"
+                  onChange={(e) => setLastName(e.target.value)}
                 />
               </div>
             </div>
@@ -36,6 +77,7 @@ const SignUp = () => {
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
                 placeholder="Email address"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="form-group mb-3">
@@ -44,10 +86,11 @@ const SignUp = () => {
                 className="form-control"
                 id="exampleInputPassword1"
                 placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className="d-grid gap-2 mt-4">
-              <button type="submit" className="btn btn-dark rounded-pill fw-bolder">
+              <button type="submit" className="btn btn-dark rounded-pill fw-bolder" onClick={signUp}>
                 CREATE AN ACCOUNT
               </button>
             </div>
