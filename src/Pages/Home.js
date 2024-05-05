@@ -12,7 +12,7 @@ function Home(){
             <Navbar />
             <Hero />
             <CardLine />
-            <ProductRows />
+            <ProductRows title="TOP OUTFITS"/>
             <About />
             <Footer />
         </>

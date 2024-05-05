@@ -1,0 +1,15 @@
+tr {
+    height: 6rem;
+}
+.cart-img {
+    width: 8rem;
+}
+.checkout-btn {
+width: 15rem;
+}
+.qty-input {
+width: 5rem;
+}
+.form-check-input:checked {
+background-color: #151515;
+}

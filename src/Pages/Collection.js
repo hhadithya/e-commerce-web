@@ -1,5 +1,6 @@
 import Navbar from '../Components/NavBar';
 import Footer from '../Components/Footer';
+import ProductRows from './ProductRows';
 import '../Stylesheets/Collection.css';
 
 function Collection(){
@@ -10,6 +11,7 @@ function Collection(){
                 <img src="/Images/tops.webp" alt="konik t shirt" className='back'/>
                 <p>Men Casual</p>
             </div>
+            <ProductRows title= ""/>
             <Footer />
         </>
       );

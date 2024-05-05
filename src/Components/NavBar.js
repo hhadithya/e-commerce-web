@@ -6,6 +6,7 @@ import { auth } from '../config/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
@@ -47,7 +48,7 @@ const Navbar = () => {
 
           <div className="order-lg-2 nav-btns">
             <button type="button" className="btn position-relative">
-              <CiShoppingCart size={25}/>
+              <Link to="/cartview" style={{textDecoration: 'none', color: '#151515'}}><CiShoppingCart size={25}/></Link>
               <span className="position-absolute top-0 start-100 translate-middle badge bg-dark rounded-circle">{cartCount}</span>
             </button>
             <button type="button" className="btn position-relative">
@@ -66,10 +67,10 @@ const Navbar = () => {
                 <a className="nav-link text-uppercase text-color" href="/">home</a>
               </li>
               <li className="nav-item px-2 py-2">
-                <a className="nav-link text-uppercase text-color" href=".com">new trends</a>
+                <a className="nav-link text-uppercase text-color" href="/">new trends</a>
               </li>
               <li className="nav-item px-2 py-2">
-                <a className="nav-link text-uppercase text-color" href=".com">men formal</a>
+                <a className="nav-link text-uppercase text-color" href="/">men formal</a>
               </li>
               <li className="nav-item px-2 py-2">
                 <a className="nav-link text-uppercase text-color" href="/collection">men casual</a>

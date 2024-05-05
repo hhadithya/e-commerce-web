@@ -50,7 +50,7 @@ function ProductView() {
             </div>
             <div className="col-md-5 d-flex" style={{marginTop: '5%'}}>
               <div className="card-body">
-                <h2 className="card-title">CycleBoard Rover Electric Scooter</h2>
+                <h2 className="card-title">Shinu Sleeve Shirt - Gray</h2>
                 <p className="card-text">
                   Innovate bootstrapping disrupt innovate innovate long shadow engaging fund. Actionable insight big paradigm disrupt.Innovate bootstrapping disrupt innovate innovate.
                 </p>
