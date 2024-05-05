@@ -1,9 +1,16 @@
-import React from 'react';
+import Navbar from '../Components/NavBar';
+import Footer from '../Components/Footer';
+import '../Stylesheets/Collection.css';
 
 function Collection(){
     return (
         <>
-        <h1>Collection</h1>
+            <Navbar />
+            <div className='image-container'>
+                <img src="/Images/tops.webp" alt="konik t shirt" className='back'/>
+                <p>Men Casual</p>
+            </div>
+            <Footer />
         </>
       );
 }
