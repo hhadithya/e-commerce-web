@@ -1,6 +1,8 @@
-import { auth } from '../config/firebase';
+import { auth, db } from '../config/firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { doc, setDoc } from 'firebase/firestore';
 import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
 
 
 const SignUp = () => {
@@ -9,13 +11,16 @@ const SignUp = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [error, setError] = useState('');
+  // const navigate = useNavigate('');
+  
+
 
   const signUp = async () => {
     if (email === '' || password === '' || firstName === '' || lastName === '') {
       setError('All fields are required');
       return;
     }
-    
+
     if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
       setError('Invalid email format');
       return;
@@ -25,12 +30,18 @@ const SignUp = () => {
       setError('Password should be at least 6 characters long');
       return;
     }
-
     try {
       await createUserWithEmailAndPassword(auth, email, password);
+      console.log("User created successfully");
+      const docRef = await setDoc(doc(db, 'users', email), {
+        firstName: firstName,
+        lastName: lastName,
+      });
+      alert("Document written with ID: ", docRef.id);
     } catch (error) {
       setError(error.message);
     }
+    // navigate('/');
   };
 
   return (

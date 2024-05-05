@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from 'firebase/firestore';
 // require ('dotenv').config();
 
 const firebaseConfig = {
@@ -14,3 +15,4 @@ const firebaseConfig = {
 console.log(process.env.REACT_APP_API_KEY);
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+export const db = getFirestore(app);

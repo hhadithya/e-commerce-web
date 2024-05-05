@@ -1,8 +1,27 @@
-import React from 'react';
+import { auth } from '../config/firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const LogIn = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate('');
+
+  const logIn = async (e) => {
+    e.preventDefault();
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate('/');
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
   return (
     <div className="container">
+    <button onClick={() => navigate('/')} className='btn btn-dark' style={{marginTop: '10px', position: 'absolute'}}>Go to Home</button>
+
       <div className="d-flex flex-column justify-content-center align-items-center" style={{height: '100vh'}}>
         <div className="col-md-6 col-lg-4">
           <form>
@@ -17,6 +36,7 @@ const LogIn = () => {
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
                 placeholder="Email address"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="form-group mb-3">
@@ -25,10 +45,11 @@ const LogIn = () => {
                 className="form-control"
                 id="exampleInputPassword1"
                 placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className="d-grid gap-2 mt-4">
-              <button type="submit" className="btn btn-dark rounded-pill fw-bolder">
+              <button type="submit" className="btn btn-dark rounded-pill fw-bolder" onClick={logIn}>
                 SIGN IN
               </button>
             </div>
@@ -41,6 +62,7 @@ const LogIn = () => {
                 Create an account
               </a>
             </div>
+            
           </form>
         </div>
       </div>

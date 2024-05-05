@@ -1,10 +1,30 @@
-import { Link } from "react-router-dom";
 import { CiShoppingCart } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 import { RiMenu2Fill } from "react-icons/ri";
 import '../Stylesheets/NavBar.css';
+import { auth } from '../config/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+      }, []);
+
+      const handleLogout = () => {
+        auth.signOut().then(() => {
+          setUser(null);
+          navigate('/login');
+        });
+      };
+
   var cartCount = 0;
   return (
     <div>
@@ -33,9 +53,11 @@ const Navbar = () => {
             <button type="button" className="btn position-relative">
               <CiSearch size={25}/>
             </button>
-            <button type="button" className="btn position-relative">
-              <Link to='/login' style={{textDecoration: 'none', color: '#151515'}}>LOGIN</Link>
-            </button>
+            {user ? (
+                <button type="button" className="btn position-relative" onClick={handleLogout}>Logout</button>
+                  ) : (
+                    <button type="button" className="btn position-relative" onClick={() => navigate('/login')}>Login</button>
+                  )}
           </div>
           
           <div className="collapse navbar-collapse order-lg-1" id="navMenu">
