@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        .mybox{
+            background-color: rgb(244, 245, 246);
+            margin-top: 50px;
+            padding: 10px;
+        }
+        #examplecardnumber {
+            padding-right: 60px; 
+            background-image: url('photos/master.png'), url('photos/visa.png');
+            background-size: 40px 30px, 40px 30px; 
+            background-repeat: no-repeat, no-repeat;
+            background-position: right 10px center, right 60px center;
+        }
+        h3{
+            color: #151515;
+        }
+        .rounded-corner {
+            border-radius: 0px;
+}
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="mybox">
+                <form>
+                    <h3>Contact</h3>
+                    <!--<p class="text-center mb-5">
+                      If you have an account with us, please log in.
+                    </p>-->
+                    
+                    <div class="form-group mb-3" >
+                      <input
+                        type="email"
+                        class="form-control rounded-corner"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder="Email address"
+                      />
+                    </div>
+                    
+                    <h3>Delivary</h3>
+                    <div>
+                        <input type="radio" id="option1" name="option" value="option1">
+                        <label for="option1">Ship</label>
+  
+                        <input type="radio" id="option2" name="option" value="option2">
+                        <label for="option2">Pickup</label><br>
+                    </div>
+                    <br>
+                    
+                    <div>
+                        <div class="form-group mb-3">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input
+                                      type="firstname"
+                                      class="form-control rounded-corner"
+                                      id="exampleInputfirstname1"
+                                      placeholder="First name"
+                                    />
+                                  </div>
+                                  <div class="col-sm-6">
+                                    <input
+                                      type="lastname"
+                                      class="form-control rounded-corner"
+                                      id="exampleInputlastname1"
+                                      placeholder="Last name"
+                                    />
+                                  </div>
+                            </div>
+                            
+                          </div>
+                    </div>
+                    
+                    
+                    
+                      <div class="form-group mb-3">
+                        <input
+                          type="address"
+                          class="form-control rounded-corner"
+                          id="exampleInputaddress1"
+                          placeholder="Address"
+                        />
+                    </div>
+
+                    <div>
+                        <div class="form-group mb-3">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input
+                                      type="city"
+                                      class="form-control rounded-corner"
+                                      id="examplecity"
+                                      placeholder="City"
+                                    />
+                                  </div>
+                                  <div class="col-sm-6">
+                                    <input
+                                      type="postalcode"
+                                      class="form-control rounded-corner"
+                                      id="examplepostalcode"
+                                      placeholder="Postal code"
+                                    />
+                                  </div>
+                            </div>
+                            
+                          </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <input
+                          type="phone"
+                          class="form-control rounded-corner"
+                          id="exampephone"
+                          placeholder="Phone number"
+                        />
+                    </div>
+                    <div>
+                        <input type="checkbox" id="check">
+                        <label for="check">Save this information for next time</label>
+                    </div>
+                    <br>
+
+                    <h3>Payment</h3>
+                    <div>
+                        <div class="form-group mb-3">
+                            <div class="">
+                                <input
+                                type="cardnumber"
+                                class="form-control rounded-corner"
+                                id="examplecardnumber"
+                                placeholder="Card number"
+                                
+                              
+                                />
+                            </div>
+                            
+                            
+                          </div>
+                          <div class="form-group mb-3">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input
+                                      type="edate"
+                                      class="form-control rounded-corner"
+                                      id="exampleedate"
+                                      placeholder="Expiration date (MM/YY)"
+                                    />
+                                  </div>
+                                  <div class="col-sm-6">
+                                    <input
+                                      type="securitycode"
+                                      class="form-control rounded-corner"
+                                      id="examplesecuritycode"
+                                      placeholder="Security code"
+                                    />
+                                  </div>
+                            </div>
+                          </div>
+                            <br>
+                            <div>
+                                <input type="checkbox" id="check">
+                                <label for="check">Use shipping address as billing address</label>
+                            </div>
+                    </div>
+                    
+                    <div class="d-grid gap-2 mt-4">
+                      <button type="submit" class="btn btn-dark rounded-pill fw-bolder">
+                        Pay now
+                      </button>
+                    </div>
+                    
+                  </form>
+            </div>
+          </div>
+
+
+          <div class="col-sm-6">
+            <div class="mybox">
+                <div class="" style="height: 150px;">
+
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <input
+                            type="discount"
+                            class="form-control rounded-corner"
+                            id="examplediscount"
+                            placeholder="Discount code or gift card"
+                            />
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="d-grid gap-2 mt-0">
+                                <button type="submit" class="btn btn-dark rounded-pill fw-bolder">
+                                  Apply
+                                </button>
+                              </div>
+                        </div>
+                    </div>
+
+                <br>
+                 
+                <p>Subtotal</p>
+                <p>Shipping</p>
+                <h5>Total</h5>    
+                
+                
+            </div>
+          </div>
+
+
+        </div>
+        
+      </div>
+</body>
+</html>

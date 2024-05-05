@@ -1,4 +1,5 @@
 import '../Stylesheets/footer.css';
+import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 
 const Footer = () => {
@@ -11,8 +12,9 @@ const Footer = () => {
                         <div className="d-flex flex-column gap-1">
                             <p style={{ marginBottom: '1%' }} className='heading'>FOLLOW US</p>
                             <div className="d-flex gap-4">
-                                <FaInstagram size={25} />
-                                <FaFacebook size={25} />
+                                <Link to="https://www.instagram.com/konikclothings?igsh=bmFpb2kxdGRvamk5" style={{textDecoration: 'none', color: '#ffffff'}}><FaInstagram size={25} /></Link>
+                                <Link to="https://www.facebook.com/profile.php?id=100080665934769&mibextid=ZbWKwL" style={{textDecoration: 'none', color: '#ffffff'}}><FaFacebook size={25} /></Link>
+                                
                                 <FaTiktok size={25}  />
                                 <FaYoutube size={25}  />
                             </div>

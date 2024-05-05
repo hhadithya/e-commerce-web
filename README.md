@@ -35,3 +35,8 @@ An e-commerce platform specialized for men to explore a premium collection of me
 
 - The product cart icon in the navbar routes to this page.
 - Displays the products in the cart (still this page is in static condition).
+
+## Checkout page
+- The "Checkout" button in the product cart page routes to this page.
+- Displays the products in the cart and the total amount to be paid.
+- But we didn't create it as a component. We have only the html and css for this page.
