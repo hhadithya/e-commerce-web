@@ -19,7 +19,7 @@ function Hero() {
           alt="First slide"
           style={{ objectFit: 'cover' , height: 'auto'}}
         />
-        <Carousel.Caption>
+        <Carousel.Caption  className='item1'>
           <div class="text-overlay">
             <h1 className='heading1'>KONIK STYLE</h1>
             <p className='text1'>The most comfortable outfits you'll ever have.</p>
