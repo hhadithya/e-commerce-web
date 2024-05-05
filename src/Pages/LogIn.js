@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const LogIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate('');
 
   const logIn = async (e) => {
@@ -14,6 +15,7 @@ const LogIn = () => {
       await signInWithEmailAndPassword(auth, email, password);
       navigate('/');
     } catch (error) {
+      setError(error.message);
       console.error(error.message);
     }
   };
@@ -24,6 +26,7 @@ const LogIn = () => {
 
       <div className="d-flex flex-column justify-content-center align-items-center" style={{height: '100vh'}}>
         <div className="col-md-6 col-lg-4">
+        {error && <p className="alert alert-danger">{error}</p>}
           <form>
             <h2 className="text-center mb-3">LOGIN</h2>
             <p className="text-center mb-5">
