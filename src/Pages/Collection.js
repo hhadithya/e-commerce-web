@@ -2,7 +2,7 @@ import Navbar from '../Components/NavBar';
 import Footer from '../Components/Footer';
 import '../Stylesheets/Collection.css';
 
-function Home(){
+function Collection(){
     return (
         <>
             <Navbar />
@@ -14,5 +14,5 @@ function Home(){
         </>
       );
 }
-export default Home;
+export default Collection;
 
