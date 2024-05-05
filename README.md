@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# KONIK CLOTHINGS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An e-commerce platform specialized for men to explore a premium collection of men's outfits in Sri Lanka.
 
-## Available Scripts
+## HOME page
 
-In the project directory, you can run:
+- Only "HOME" page and the "MEN CASUAL" page in the navbar are linked.
+- The "SHOP NOW" button in the second image of the image slider in the header section routes to the "MEN CASUAL" page.
+- This page displays the collection of products fetched from the database.
+- "Quick View" button displayed after hovering over a product card routes to a page with the product details.
 
-### `npm start`
+## MEN CASUAL page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- This page displays the collection of products fetched from the database.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Product details card in the quick view
 
-### `npm test`
+- "Quick View" button displayed after hovering over a product card routes to this page.
+- This page displays the details of an individual product.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Login page
 
-### `npm run build`
+- The "Login" button in the navbar routes to this page.
+- Email address and password are authenticated through firebase.
+- The link "Create an account" routes to the "Signup" page.
+- The "Go to Home" button routes to the "HOME" page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Signup page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- The link "Create an account" in the "Login" page routes to the "Signup" page.
+- Account creation is done and validated through firebase.
+- The link "Login" routes to the Login page allowing the user to login after successful account creation.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Product Cart page
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The product cart icon in the navbar routes to this page.
+- Displays the products in the cart (still this page is in static condition).
