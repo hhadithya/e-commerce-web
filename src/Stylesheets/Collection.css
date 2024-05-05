@@ -1,0 +1,117 @@
+.back {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+}
+
+.back:hover {
+    opacity: 0.9;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container p {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #151515;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    p {
+        font-size: 8vw;
+        top: 4%;
+
+    }
+
+    .back {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+
+
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    p {
+        font-size: 8vw;
+        top: 4%;
+
+    }
+
+    .back {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+    p {
+        font-size: 8vw;
+        top: 5%;
+
+    }
+
+    .back {
+        width: 100%;
+        object-fit: cover;
+        height:300px;
+
+    }
+}
+
+/* For tablet displays up to 1280x800 */
+@media screen and (max-width: 600px) {
+    p {
+        font-size: 10vw;
+        top: 5%;
+
+    }
+
+    .back {
+        width: 100%;
+        object-fit: cover;
+        height:300px;
+
+    }
+}
+
+@media screen and (max-width: 400px) {
+    p {
+        font-size: 10vw;
+        top: 5%;
+
+    }
+
+    .back {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+
+    }
+}
+
+@media screen and (max-width: 200px) {
+    p {
+        font-size: 10vw;
+        top: 5%;
+
+    }
+
+    .back {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+
+    }
+}
