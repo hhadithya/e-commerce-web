@@ -1,7 +1,7 @@
 import { auth } from '../config/firebase';
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -9,14 +9,13 @@ const SignUp = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate();
 
   const signUp = async () => {
     if (email === '' || password === '' || firstName === '' || lastName === '') {
       setError('All fields are required');
       return;
     }
-
+    
     if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
       setError('Invalid email format');
       return;
@@ -28,12 +27,7 @@ const SignUp = () => {
     }
 
     try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      console.log("Here");
-      const user = userCredential.user;
-      await updateProfile(user, { displayName: `${firstName} ${lastName}` });
-      setError('');
-      navigate('/');
+      await createUserWithEmailAndPassword(auth, email, password);
     } catch (error) {
       setError(error.message);
     }

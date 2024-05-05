@@ -3,7 +3,6 @@ import { CiShoppingCart } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 import { RiMenu2Fill } from "react-icons/ri";
 import '../Stylesheets/NavBar.css';
-import { auth } from '../config/firebase';
 
 const Navbar = () => {
   var cartCount = 0;
