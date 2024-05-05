@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from '../src/Pages/Home';
 import ProductView from '../src/Pages/ProductView';
 import CheckOutCard from './Components/CheckOutCard';
-import Collection from './Pages/Collection';
+import Collection from '../src/Pages/Collection';
 
 function App() {
   return (
