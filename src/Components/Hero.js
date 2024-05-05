@@ -7,7 +7,7 @@ function Hero() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="/Images/banner.webp"
+          src="/Images/banner.jpg"
           alt="First slide"
           style={{ objectFit: 'cover' , height: 'auto'}}
         />

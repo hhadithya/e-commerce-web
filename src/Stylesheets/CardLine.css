@@ -1,0 +1,12 @@
+.imgCard{
+    object-fit: cover;
+    border: 0px;
+}
+
+.title{
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: white;
+    font-family: Prompt;
+    letter-spacing: -2px;
+}

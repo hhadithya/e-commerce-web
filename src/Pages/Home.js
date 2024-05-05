@@ -2,6 +2,7 @@ import Navbar from '../Components/NavBar';
 import Hero from '../Components/Hero';
 import ProductRows from '../Pages/ProductRows';
 import Footer from '../Components/Footer';
+import CardLine from '../Components/CardLine';
 
 
 function Home(){
@@ -9,6 +10,7 @@ function Home(){
         <>
             <Navbar />
             <Hero />
+            <CardLine />
             <ProductRows />
             <Footer />
         </>
