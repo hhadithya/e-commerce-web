@@ -11,9 +11,9 @@ function Home(){
         <>
             <Navbar />
             <Hero />
+            <About />
             <CardLine />
             <ProductRows />
-            <About />
             <Footer />
         </>
       );
