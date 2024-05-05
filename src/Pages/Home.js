@@ -3,6 +3,7 @@ import Hero from '../Components/Hero';
 import ProductRows from './ProductRows';
 import Footer from '../Components/Footer';
 import CardLine from '../Components/CardLine';
+import About from '../Components/About';
 
 
 function Home(){
@@ -12,7 +13,7 @@ function Home(){
             <Hero />
             <CardLine />
             <ProductRows />
-
+            <About />
             <Footer />
         </>
       );
