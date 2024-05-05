@@ -4,7 +4,7 @@ import ProductView from './Pages/ProductView';
 import CheckOutCard from './Components/CheckOutCard';
 import Collection from './Pages/Collection';
 import LogIn from './Pages/LogIn';
-import Signup from './Pages/SignUp';
+import SignUp from './Pages/SignUp';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/checkout" element={<CheckOutCard />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/login" element={<LogIn />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </>
   );

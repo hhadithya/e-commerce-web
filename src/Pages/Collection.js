@@ -1,3 +1,4 @@
+import React from 'react';
 import Navbar from '../Components/NavBar';
 import Footer from '../Components/Footer';
 import '../Stylesheets/Collection.css';

@@ -1,5 +1,6 @@
+import React from 'react';
 
-const Signup = () => {
+const SignUp = () => {
   return (
     <div className="container">
       <div className="d-flex flex-column justify-content-center align-items-center" style={{height: '100vh'}}>
@@ -66,4 +67,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignUp;
