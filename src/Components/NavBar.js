@@ -32,12 +32,15 @@ const Navbar = () => {
             <button type="button" className="btn position-relative">
               <CiSearch size={25}/>
             </button>
+            <button type="button" className="btn position-relative">
+              LOGIN
+            </button>
           </div>
           
           <div className="collapse navbar-collapse order-lg-1" id="navMenu">
             <ul className="navbar-nav mx-auto text-center">
               <li className="nav-item px-2 py-2">
-                <a className="nav-link text-uppercase text-color" href=".com">home</a>
+                <a className="nav-link text-uppercase text-color" href="./index.js">home</a>
               </li>
               <li className="nav-item px-2 py-2">
                 <a className="nav-link text-uppercase text-color" href=".com">new trends</a>
