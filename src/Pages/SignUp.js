@@ -2,7 +2,7 @@ import { auth, db } from '../config/firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const SignUp = () => {
@@ -11,11 +11,13 @@ const SignUp = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [error, setError] = useState('');
-  // const navigate = useNavigate('');
+  const navigate = useNavigate('');
   
 
 
-  const signUp = async () => {
+  const signUp = async (event) => {
+    event.preventDefault();
+
     if (email === '' || password === '' || firstName === '' || lastName === '') {
       setError('All fields are required');
       return;
@@ -32,20 +34,20 @@ const SignUp = () => {
     }
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      console.log("User created successfully");
-      const docRef = await setDoc(doc(db, 'users', email), {
+      await setDoc(doc(db, 'users', email), {
         firstName: firstName,
         lastName: lastName,
       });
-      alert("Document written with ID: ", docRef.id);
+      navigate('/login');
     } catch (error) {
       setError(error.message);
     }
-    // navigate('/');
   };
 
   return (
     <div className="container">
+      <button onClick={() => navigate('/')} className='btn btn-dark' style={{marginTop: '10px', position: 'absolute'}}>Go to Home</button>
+
       <div className="d-flex flex-column justify-content-center align-items-center" style={{height: '100vh'}}>
         <div className="col-md-6 col-lg-4">
           {error && <p className="alert alert-danger">{error}</p>}
