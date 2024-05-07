@@ -3,17 +3,11 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../Stylesheets/productCard.css';
 import { FaHeart } from "react-icons/fa";
-import { useState } from 'react';
+import { useContext } from 'react';
+import DataContext from '../Context/DataContext';
 
 function ProductCard({title, price, image, id}) {
-  const [cart, setCart] = useState([]);
-  const [products] = useState({id, title, price, image});
-
-  const addToCart = (products) => {
-    alert("Item added to cart");
-    setCart([...cart, products]);
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }
+  const { incrementCount } = useContext(DataContext);
   
   return (
     <div className="d-flex" style={{color: '#151515'}}>
@@ -34,7 +28,7 @@ function ProductCard({title, price, image, id}) {
             <Button variant="outline-dark" id="button-line">L</Button>
             <Button variant="outline-dark" id="button-line">XL</Button>
           </div>
-          <Button variant="outline-dark" id="add-to-cart-button" onClick={() => addToCart(products)}>Add to cart</Button>
+          <Button variant="outline-dark" id="add-to-cart-button" onClick={incrementCount}>Add to cart</Button>
         </Card.Body>
       </Card>
     </div>

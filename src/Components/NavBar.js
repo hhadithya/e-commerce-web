@@ -4,11 +4,13 @@ import { RiMenu2Fill } from "react-icons/ri";
 import '../Stylesheets/NavBar.css';
 import { auth } from '../config/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import DataContext from "../Context/DataContext";
 
 const Navbar = () => {
+  const { count } = useContext(DataContext);
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
@@ -26,7 +28,6 @@ const Navbar = () => {
         });
       };
 
-  var cartCount = 5;
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
@@ -49,7 +50,7 @@ const Navbar = () => {
           <div className="order-lg-2 nav-btns">
             <button type="button" className="btn position-relative">
               <Link to="/cartview" style={{textDecoration: 'none', color: '#151515'}}><CiShoppingCart size={25}/></Link>
-              <span className="position-absolute top-0 start-100 translate-middle badge bg-dark rounded-circle">{cartCount}</span>
+              <span className="position-absolute top-0 start-100 translate-middle badge bg-dark rounded-circle">{count}</span>
             </button>
             <button type="button" className="btn position-relative">
               <CiSearch size={25}/>

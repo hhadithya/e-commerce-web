@@ -5,10 +5,11 @@ import Collection from './Pages/Collection';
 import LogIn from './Pages/LogIn';
 import SignUp from './Pages/SignUp';
 import CartView from './Pages/CartView';
+import { DataProvider } from './Context/DataContext';
 
 function App() {
   return (
-    <>
+    <DataProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product-view/:id" element={<ProductView />} />
@@ -17,7 +18,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/cartview" element={<CartView />} />
       </Routes>
-    </>
+    </DataProvider>
   );
 }
 
