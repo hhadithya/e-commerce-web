@@ -1,29 +1,30 @@
 import ProductCard from '../Components/ProductCard';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../config/firebase';
 
 function ProductRows({title, dbCollection, onLoading}) {
-    const [products, setProducts] = useState([]);
+  const onLoadingRef = useRef(onLoading);
+  const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        const fetchProducts = async () => {
-            try {
-              onLoading(true);
-              console.log('Fetching products...');
-              const querySnapshot = await getDocs(collection(db, dbCollection));
-              const productsData = querySnapshot.docs.map((doc) => doc.data());
-              setProducts(productsData);
-            } catch (error) {
-              console.error('Error fetching products: ', error);
-            } finally {
-                console.log('Products fetched successfully!');
-              onLoading(false);
-            }
-          };
-      
-          fetchProducts();
-        }, [dbCollection]);
+  useEffect(() => {
+      const fetchProducts = async () => {
+          try {
+            onLoadingRef.current(true);
+            console.log('Fetching products...');
+            const querySnapshot = await getDocs(collection(db, dbCollection));
+            const productsData = querySnapshot.docs.map((doc) => doc.data());
+            setProducts(productsData);
+          } catch (error) {
+            console.error('Error fetching products: ', error);
+          } finally {
+              console.log('Products fetched successfully!');
+              onLoadingRef.current(false);
+          }
+      };
+
+      fetchProducts();
+  }, [dbCollection]);
 
     return (
         <>
