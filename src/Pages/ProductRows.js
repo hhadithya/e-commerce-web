@@ -3,13 +3,13 @@ import { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../config/firebase';
 
-function ProductRows({title}) {
+function ProductRows({title, dbCollection}) {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const querySnapshot = await getDocs(collection(db, 'best-sales'));
+                const querySnapshot = await getDocs(collection(db, dbCollection));
                 const productsData = querySnapshot.docs.map((doc) => doc.data());
                 setProducts(productsData);
             } catch (error) {
@@ -18,7 +18,7 @@ function ProductRows({title}) {
         };
 
         fetchProducts();
-    }, []);
+    }, [dbCollection]);
 
     return (
         <>

@@ -26,7 +26,7 @@ const Navbar = () => {
         });
       };
 
-  var cartCount = 0;
+  var cartCount = 5;
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">

@@ -11,7 +11,7 @@ function Collection(){
                 <img src="/Images/tops.webp" alt="konik t shirt" className='back'/>
                 <p>Men Casual</p>
             </div>
-            <ProductRows title= ""/>
+            <ProductRows title= "" dbCollection="mens-casual"/>
             <Footer />
         </>
       );

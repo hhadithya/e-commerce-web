@@ -7,11 +7,12 @@ import { useState } from 'react';
 
 function ProductCard({title, price, image, id}) {
   const [cart, setCart] = useState([]);
-  const [products] = useState({title, price, image, id});
+  const [products] = useState({id, title, price, image});
 
   const addToCart = (products) => {
-    console.log("Added to cart");
+    alert("Item added to cart");
     setCart([...cart, products]);
+    localStorage.setItem('cart', JSON.stringify(cart));
   }
   
   return (
