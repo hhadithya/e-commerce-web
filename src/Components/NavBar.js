@@ -44,7 +44,10 @@ const Navbar = () => {
             className="navbar-brand d-flex justify-content-between align-items-center order-lg-0"
             href=".com"
           >
-            <span className="text-uppercase fw-lighter ms-2">KONIK CLOTHINGS</span>
+            <span className="text-uppercase fw-lighter ms-2">
+            <Link to="/" style={{textDecoration: 'none', color: '#151515'}}>
+              KONIK CLOTHINGS
+            </Link></span>
           </a>
 
           <div className="order-lg-2 nav-btns">
