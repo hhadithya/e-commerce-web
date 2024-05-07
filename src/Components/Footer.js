@@ -41,7 +41,7 @@ const Footer = () => {
                                 <p className='heading'>INFO</p>
                                 <p className="text">Our Story</p>
                                 <p className="text">Contact Us</p>
-                                <p className="text">Careers at FOA</p>
+                                <p className="text">Careers at KONIK</p>
                                 <p className="text">Training Dept</p>
                             </div>
                         </div>
