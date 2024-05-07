@@ -11,8 +11,7 @@ function Loading() {
         setTimeout(() => {
             setShowImg(false);
             setText('Loading.');
-            navigate('/home');
-        }, 3000);
+        }, 4000);
     }, [navigate]);
 
     return (

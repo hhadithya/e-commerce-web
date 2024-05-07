@@ -6,14 +6,12 @@ import LogIn from './Pages/LogIn';
 import SignUp from './Pages/SignUp';
 import CartView from './Pages/CartView';
 import { DataProvider } from './Context/DataContext';
-import Loading from './Components/Loading';
 
 function App() {
   return (
     <DataProvider>
       <Routes>
-        <Route path="/" element={<Loading />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/product-view/:id" element={<ProductView />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/login" element={<LogIn />} />
