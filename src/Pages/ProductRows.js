@@ -13,7 +13,7 @@ function ProductRows({title, dbCollection, onLoading}) {
             onLoadingRef.current(true);
             console.log('Fetching products...');
             const querySnapshot = await getDocs(collection(db, dbCollection));
-            const productsData = querySnapshot.docs.map((doc) => doc.data());
+            const productsData = querySnapshot.docs.map((doc) => ({id: doc.id, ...doc.data(),}));
             setProducts(productsData);
           } catch (error) {
             console.error('Error fetching products: ', error);
@@ -32,7 +32,7 @@ function ProductRows({title, dbCollection, onLoading}) {
             <div className="App d-flex flex-wrap justify-content-center">
                 {products.map((product) => (
                     <div className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center text-center" key={product.id}>
-                        <ProductCard title={product.title} price={product.price} image={product.image} id={product.id} />
+                        <ProductCard title={product.title} price={product.price} image={product.image} id={product.id} rate={product.rate} rateCount={product['rate-count']}/>
                     </div>
                 ))}
             </div>

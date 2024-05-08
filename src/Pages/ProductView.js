@@ -1,9 +1,13 @@
-import { FaStar } from "react-icons/fa";
+import { useLocation } from 'react-router-dom';
+import { FaStar, FaRegStar } from "react-icons/fa";
 import '../Stylesheets/productView.css';
 import Navbar from '../Components/NavBar';
 import Footer from '../Components/Footer';
 
 function ProductView() {
+  const location = useLocation();
+  const { title, price, image, rate, rateCount } = location.state;
+
   return (
     <>
       <Navbar />
@@ -15,14 +19,14 @@ function ProductView() {
                 <div className="carousel-inner ">
                   <div className="carousel-item active ">
                     <img
-                      src="/Images/top1-1.webp"
+                      src={image}
                       className="d-block w-100"
                       alt="..."
                     />
                   </div>
                   <div className="carousel-item">
                     <img
-                      src="/Images/top1-2.webp"
+                      src="/Images/top1-1.webp"
                       className="d-block w-100"
                       alt="..."
                     />
@@ -50,24 +54,22 @@ function ProductView() {
             </div>
             <div className="col-md-5 d-flex" style={{marginTop: '5%'}}>
               <div className="card-body">
-                <h2 className="card-title">Shinu Sleeve Shirt - Gray</h2>
+                <h2 className="card-title">{title}</h2>
                 <p className="card-text">
                   Innovate bootstrapping disrupt innovate innovate long shadow engaging fund. Actionable insight big paradigm disrupt.Innovate bootstrapping disrupt innovate innovate.
                 </p>
                 <div className="row">
                   <div className="col-md-6">
-                    <p className="card-text">PRICE: $499</p>
-                    <p className="card-text">AVAILABLE IN STOCK</p>
+                    <p className="card-text">PRICE: {price}</p>
+                    <p className="card-text" style={{color: 'green', fontSize: '0.9rem'}}>available in stock</p>
                   </div>
                   <div className="col-md-6">
-                    <p className="card-text">
-                      <FaStar className='star-style'/>
-                      <FaStar className='star-style'/>
-                      <FaStar className='star-style'/>
-                      <FaStar className='star-style'/>
-                      <FaStar className='star-style'/>
-                      (74 Reviews)
-                    </p>
+                    <div className="card-text">
+                      {Array(5)
+                        .fill()
+                        .map((_, i) => (i < rate ? <FaStar /> : <FaRegStar />))}
+                      <br/>({rateCount} Reviews)
+                    </div>
                     <div className="input-group mb-3 ">
                       <span className="input-group-text btnSelect">Qty</span>
                       <input

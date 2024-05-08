@@ -12,7 +12,7 @@ function App() {
     <DataProvider>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product-view/:id" element={<ProductView />} />
+        <Route path="/product-view" element={<ProductView />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
