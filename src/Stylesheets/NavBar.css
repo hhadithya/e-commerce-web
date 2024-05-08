@@ -36,3 +36,36 @@
     outline: none;
     box-shadow: none;
 }
+
+@media screen and (max-width: 500px) {
+  .navbar-brand span {
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+  }
+  .nav-btns{
+    width: 50%;
+  }
+  .toggle{
+    width: 75%;
+  }
+  .badge{
+    margin-top: 5%;
+    padding-top: 10%;
+    font-size: 0.7rem;
+    width: 20px;
+    height: 20px;
+  }
+  
+}
+@media screen and (max-width: 460px) {
+  .search{
+    display: none;
+  }
+  .nav-btns{
+    text-align: center;
+  }
+  .navbar-brand span {
+    text-align: center;
+  }
+  
+}

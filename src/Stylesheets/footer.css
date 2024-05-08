@@ -48,3 +48,9 @@ img {
         width: 150%;
     }
 }
+
+@media (max-width: 400px) {
+    #emailInput {
+        width: 100%;
+    }
+}

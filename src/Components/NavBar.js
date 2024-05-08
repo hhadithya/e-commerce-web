@@ -38,7 +38,7 @@ const Navbar = () => {
             data-bs-toggle="collapse"
             data-bs-target="#navMenu"
           >
-            <RiMenu2Fill size={25} style={{color:'#151515'}}/>
+            <RiMenu2Fill size={25} style={{color:'#151515'}} className="toggle"/>
           </button>
           <a
             className="navbar-brand d-flex justify-content-between align-items-center order-lg-0"
@@ -55,7 +55,7 @@ const Navbar = () => {
               <Link to="/cartview" style={{textDecoration: 'none', color: '#151515'}}><CiShoppingCart size={25}/></Link>
               <span className="position-absolute top-0 start-100 translate-middle badge bg-dark rounded-circle">{count}</span>
             </button>
-            <button type="button" className="btn position-relative">
+            <button type="button" className="btn position-relative search">
               <CiSearch size={25}/>
             </button>
             {user ? (
