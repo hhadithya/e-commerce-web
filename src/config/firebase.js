@@ -4,7 +4,7 @@ import { getFirestore } from 'firebase/firestore';
 // require ('dotenv').config();
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB8BPvqY0EdurQBfx_BySSxKIYV_Q1vebU",
+  apiKey: process.env.REACT_APP_API_KEY,
   authDomain: "e-commerce-web-5fus.firebaseapp.com",
   projectId: "e-commerce-web-5fus",
   storageBucket: "e-commerce-web-5fus.appspot.com",
