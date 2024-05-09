@@ -1,6 +1,12 @@
 .imgCard{
     object-fit: cover;
     border: 0px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.imgCard:hover{
+    transform: scale(1.1);
 }
 
 .title{
