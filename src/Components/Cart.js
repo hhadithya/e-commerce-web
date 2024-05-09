@@ -100,7 +100,7 @@ const Cart = () => {
             </div>
             <div className="row mt-4">
                 <div className="col-md-6">
-                <a href="home" className="btn btn-outline-dark checkout-btn fw-bolder"
+                <a href="/" className="btn btn-outline-dark checkout-btn fw-bolder"
                     >Continue Shopping</a>
                 </div>
             </div>
