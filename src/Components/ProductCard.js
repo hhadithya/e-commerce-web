@@ -3,17 +3,29 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../Stylesheets/productCard.css';
 import { FaHeart } from "react-icons/fa";
-import { useContext } from 'react';
-import DataContext from '../Context/DataContext';
-// import ProductView from '../Pages/ProductView';
 
-function ProductCard({title, price, image, rate, rateCount}) {
-  const { incrementCount } = useContext(DataContext);
+function ProductCard({title, price, image, rate, rateCount, id}) {
   
   const navigate = useNavigate();
 
   const viewCard = () => {
-    navigate('/product-view', { state: { title: title, price: price, image: image, rate: rate, rateCount: rateCount } });
+    navigate('/product-view', { state: { id: id, title: title, price: price, image: image, rate: rate, rateCount: rateCount } });
+  }
+
+  function storeData() {
+    let data = {
+      id: id,
+      title: title,
+      price: price,
+      image: image,
+    };
+    if (localStorage.getItem('product') === null) {
+      localStorage.setItem('product', '[]');
+    }
+    let old_data = JSON.parse(localStorage.getItem('product'));
+    old_data.push(data);
+    localStorage.setItem('product', JSON.stringify(old_data));
+    window.location.reload();
   }
 
   return (
@@ -35,7 +47,7 @@ function ProductCard({title, price, image, rate, rateCount}) {
             <Button variant="outline-dark" id="button-line">L</Button>
             <Button variant="outline-dark" id="button-line">XL</Button>
           </div>
-          <Button variant="outline-dark" id="add-to-cart-button" onClick={incrementCount}>Add to cart</Button>
+          <Button variant="outline-dark" id="add-to-cart-button" onClick={storeData}>Add to cart</Button>
         </Card.Body>
       </Card>
     </div>

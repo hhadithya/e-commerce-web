@@ -4,13 +4,11 @@ import { RiMenu2Fill } from "react-icons/ri";
 import '../Stylesheets/NavBar.css';
 import { auth } from '../config/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import DataContext from "../Context/DataContext";
 
 const Navbar = () => {
-  const { count } = useContext(DataContext);
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
@@ -21,12 +19,19 @@ const Navbar = () => {
     return () => unsubscribe();
       }, []);
 
-      const handleLogout = () => {
-        auth.signOut().then(() => {
-          setUser(null);
-          navigate('/login');
-        });
-      };
+    const handleLogout = () => {
+      auth.signOut().then(() => {
+        setUser(null);
+        navigate('/login');
+      });
+    };
+
+  const cart = localStorage.getItem("product");
+  if (cart === null) {
+    localStorage.setItem("product", "[]");
+  }
+  const count = JSON.parse(cart).length;
+  console.log(cart);
 
   return (
     <div>

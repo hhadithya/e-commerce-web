@@ -6,7 +6,23 @@ import Footer from '../Components/Footer';
 
 function ProductView() {
   const location = useLocation();
-  const { title, price, image, rate, rateCount } = location.state;
+  const { id, title, price, image, rate, rateCount } = location.state;
+
+  function storeData() {
+    let data = {
+      id: id,
+      title: title,
+      price: price,
+      image: image,
+    };
+    if (localStorage.getItem('product') === null) {
+      localStorage.setItem('product', '[]');
+    }
+    let old_data = JSON.parse(localStorage.getItem('product'));
+    old_data.push(data);
+    localStorage.setItem('product', JSON.stringify(old_data));
+    window.location.reload();
+  }
 
   return (
     <>
@@ -88,7 +104,7 @@ function ProductView() {
                   </div>
                 </div>
                 <div className="d-grid gap-2 d-md-flex-column">
-                  <button className="btn btn-outline-dark btn btnAdd" type="button">
+                  <button className="btn btn-outline-dark btn btnAdd" type="button" onClick={storeData}>
                     ADD TO CART
                   </button>
                   <button className="btn btn-outline-dark btn btnAdd" type="button">
