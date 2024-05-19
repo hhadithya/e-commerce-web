@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
+  apiKey: "process.env.REACT_APP_API_KEY",
   authDomain: "e-commerce-web-5fus.firebaseapp.com",
   projectId: "e-commerce-web-5fus",
   storageBucket: "e-commerce-web-5fus.appspot.com",
