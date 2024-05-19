@@ -13,7 +13,9 @@ const Cart = () => {
     const uniqueItems = Array.from(new Set(items.map((a) => a.id))).map((id) => {
         let count = items.filter((a) => a.id === id).length;
         let item = items.find((a) => a.id === id);
-        return { ...item, count: count };
+        let price = item.price.replace('$', '');
+        let total = price * count;
+        return { ...item, count: count, total: total };
     });
     console.log(uniqueItems);
 
@@ -89,7 +91,9 @@ const Cart = () => {
                                 />
                                 </td>
                                 <td>
-                                    <h5 className="mt-4" style={{fontSize: '1rem'}}>{item.price}</h5>
+                                    <h5 className="mt-4" style={{fontSize: '1rem'}}>
+                                        {item.total}
+                                    </h5>
                                 </td>
                             </tr>
                         ))}
