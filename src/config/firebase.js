@@ -8,7 +8,7 @@ const firebaseConfig = {
   projectId: "e-commerce-web-5fus",
   storageBucket: "e-commerce-web-5fus.appspot.com",
   messagingSenderId: "953680942798",
-  appId: "1:953680942798:web:969782825fb4cc35c4e29f"
+  appId: process.env.REACT_APP_ID
 };
 
 // console.log(process.env.REACT_APP_API_KEY);

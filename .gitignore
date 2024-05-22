@@ -10,7 +10,6 @@
 
 # production
 /build
-/src/config/firebase.js
 
 # misc
 .env
