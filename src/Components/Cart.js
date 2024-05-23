@@ -92,7 +92,7 @@ const Cart = () => {
                                 </td>
                                 <td>
                                     <h5 className="mt-4" style={{fontSize: '1rem'}}>
-                                        {item.total.toFixed(2)}
+                                        ${item.total.toFixed(2)}
                                     </h5>
                                 </td>
                             </tr>
